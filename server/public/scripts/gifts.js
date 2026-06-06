@@ -77,5 +77,11 @@ const renderGift = async () => {
   }
 };
 
+if (requestedUrl) {
+  window.location.href = '../404.html'
+}
+else {
+  renderGift();
+}
+
 renderGifts();
-renderGift();
