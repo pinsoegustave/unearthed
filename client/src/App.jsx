@@ -11,14 +11,26 @@ const App = () => {
   
   const [gifts, setGifts] = useState([]);
 
+  const fetchGifts = async () => {
+    const response = await fetch('/gifts')
+    const data = await response.json()
+    setGifts(json)
+  }
+
 
   useEffect(() => {
+    const fetchGifts = async () => {
+    const response = await fetch('/gifts')
+    const data = await response.json()
+    setGifts(data)
+  }
 
-  
+  fetchGifts();
     
 
   }, []);
-
+  
+  
 
   // Sets up routes
   let element = useRoutes([
